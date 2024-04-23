@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "VS Extension",
+    "description": "Extension Made By VriskaSekret",
+    "version": "1.0",
+    "action": {
+        "default_popup": "default.html",
+        "default_icon": "images/vs.png"
+    },
+	"icons": {
+        "16": "images/vs.png"
+    },
+	"permissions": ["scripting", "activeTab", "storage"],
+		"content_scripts": [{
+        "js": ["scripts/apistuff.js"],
+		"matches": [
+            "https://developer.chrome.com/docs/extensions/*",
+            "https://developer.chrome.com/docs/webstore/*"
+        ]
+	}]
+}
